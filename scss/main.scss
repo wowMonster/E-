@@ -1,0 +1,324 @@
+
+
+@mixin fudong{
+    float: left;
+    font-size: 13px;
+    list-style: none;
+    padding:0px 10px;
+    line-height: 30px;
+    &:hover{
+        color: #7f8dd3;
+    }
+}
+@mixin con{
+    margin-left: 54px;
+    width: 1173px;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#warp{
+    width: 100%;
+    background-color: #F5F5F5;
+}
+#xiangxi{
+    position: relative;
+    @include con;
+    background-color: #F5F5F5;
+    height: 30px;
+
+#one{
+    position: absolute;
+    left: 32px;
+    li{
+        @include fudong;
+    }
+}
+#way{
+    position: relative;
+    &:hover #lan{
+        display: block;
+    }
+}
+#two{ 
+    position: absolute;
+    left: 700px;
+    li{
+        @include fudong;
+    }
+}
+
+ .se{
+       color: #ff664c;
+   }
+#lan{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -5px;
+    width: 350px;
+    z-index: 2;
+    background-color: white;
+    border: 1px solid darkgray;
+    height: 190px;
+    .hua{
+        color: dimgray;
+        display: block;
+        float: left;
+        width: 400px;
+          span{
+                float: left;
+            }
+            ul{
+                float: left;
+                color: dimgray;
+                li{
+                    &:hover{
+                        background-color: #fb6003;
+                        color: white;
+                    }
+                    float: left;
+                }
+            }
+    }
+}
+#mye{
+    &:hover ul{
+        display: block;
+    }
+    position: relative;
+    ul{
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 80px;
+        left: -20px;
+        z-index: 2;
+        padding-top: 5px;
+        padding-left: 25px;
+        height: 114px;
+        border: 1px solid darkgray;
+        box-shadow: 3px 3px 3px darkgray;
+        li{
+            color: black;
+            list-style:disc;
+            padding-left: 0px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+    
+}
+#shoucang{
+        position: relative;
+        &:hover ul{
+            display: block;
+        }
+        ul{
+            width: 80px;
+            left: -20px;
+            box-shadow: 3px 3px 3px darkgray;
+            position: absolute;
+            background-color: white;
+            padding-left: 25px;
+            z-index: 2;
+            display: none;
+            li{
+                list-style:disc;
+                padding-left: 0px;
+                font-size: 12px;
+                color: black;
+                &hover{
+                    color: #7F8DD3;
+                }
+            }
+        }
+}
+#ma{
+    position: relative;
+    &:hover img{
+        display: block;
+    }
+    img{
+        position: absolute;
+        left: -2px;
+        width: 60px;
+        display: none;
+    }
+}
+}
+
+//导航条
+    nav{
+       @include con;
+        height: 80px;
+        background: url(../img/banner.jpg) no-repeat left top;
+    }
+// 浮动
+#fudong{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 36px;
+    height: 671px;
+    background-color: lightblue;
+    
+}
+//带有搜索的lanch包括logo
+#lanch{
+    @include con;
+    height: 125px;
+    overflow: hidden;
+    position: relative;
+    #logo{
+       position: absolute;
+       top: 5px;
+       left: 20px;
+        width:177px;
+        height: 92px;
+        background: url(../img/logo.png) no-repeat center top;
+    }
+    #search{
+        width: 485px;
+        height: 80px;
+        left: 300px;
+        top: 35px;
+        position: absolute;
+        #sousuokuang{
+            float: left;
+            width: 400px;
+            height: 30px;
+            border: 2px solid #e74085;
+        }
+        #sousuo{
+            float: left;
+            width: 77px;
+            height: 34px;
+            background-color: #e74085;
+            border:none;
+        }
+        div{
+            height: 60px;
+            span{
+                color: #808080;
+                font-size: 14px;
+            }
+        }
+    }
+    img{
+        display: block;
+        width: 153px;
+        height: 28px;
+        position: absolute;
+        left: 830px;
+        top: 40px;
+    }
+    #gologo{
+        width: 130px;
+        height: 39px;
+        position: absolute;
+        left: 1044px;
+        top: 40px;
+        background: url(../img/yao.gif) no-repeat top center;
+        a{
+            font-size: 12px;
+            text-decoration: none;
+            float: right;
+            color: gray;
+            margin-right: 20px;
+            line-height: 39px;
+        }
+    }
+    
+    
+}
+//带有轮播图的头部
+#header{
+      width: 1227px;
+      height: 395px;
+      margin-left: 0px;
+      background-color: blanchedalmond;
+      position: relative;
+      #xiahua{
+          position: absolute;
+          left: 54px;
+          width: 228px;
+          height: 395px;
+          background-color: cornflowerblue;
+          #xiahua-shang{
+              width: 228px;
+              height: 34px;
+              margin-bottom: 2px;
+              background-color: palevioletred;
+          }
+          #xiahua-xia{
+              width: 228px;
+              height: 359px;
+              background-color: oldlace;
+          }
+      } 
+      #youbian{
+          width: 198px;
+          height: 395px;
+          position: absolute;
+          right: 0px;
+          bottom: 0px;
+          background-color: aquamarine;
+      }
+           
+   }
+//每日疯抢
+#content{
+   margin-top: 30px;
+   @include con;
+   height: 462px;
+   background-color: #DB7093;
+   position: relative;
+   #content-left{
+       position: absolute;
+       left: 0;
+       width: 328px;
+       height: 462px;
+       background-color: coral;
+   }
+}
+//重复的content
+.gong{
+    @include con;
+    height: 579px;
+    margin-top: 50px;
+    background-color: darkolivegreen;
+}
+//会动的萌萌图
+#touch{
+    margin-top: 30px;
+    width: 1227px;
+    height: 102px;
+    border: 1px solid darkgray;
+    margin-left: 0px;
+    background-color: bisque;
+}
+//联系管理等
+#about{
+    width: 1227px;
+    margin-left: 0px;
+    height: 184px;
+    border: 1px solid gainsboro;
+    background-color: #ADD8E6;
+}
+//footer底部
+footer{
+    width: 1227px;
+    margin-left: 0px;
+    height: 168px;
+    background-color: palevioletred;
+}
+
+
+
+

@@ -14,14 +14,26 @@
     margin-left: 54px;
     width: 1173px;
 }
-
-
+@mixin both{
+         border: none;
+         background-color: white;
+         width: 112px;
+         height: 28px;
+         font-size: 12px;
+         line-height: 28px;
+         text-align: center;
+         position: absolute;
+         left: 100px;
+         top: 55px;
+         border-radius: 5px;
+     } 
 
 
 *{
     margin: 0;
     padding: 0;
 }
+
 #warp{
     width: 100%;
     background-color: #F5F5F5;
@@ -31,6 +43,7 @@
     @include con;
     background-color: #F5F5F5;
     height: 30px;
+    margin: 0 auto;
 
 #one{
     position: absolute;
@@ -158,6 +171,7 @@
        @include con;
         height: 80px;
         background: url(../img/banner.jpg) no-repeat left top;
+         margin: 0 auto;
     }
 // 浮动
 #fudong{
@@ -175,6 +189,7 @@
     height: 125px;
     overflow: hidden;
     position: relative;
+        margin: 0 auto;
     #logo{
        position: absolute;
        top: 5px;
@@ -242,33 +257,276 @@
       width: 1227px;
       height: 395px;
       margin-left: 0px;
-      background-color: blanchedalmond;
       position: relative;
+      
+      #bu{
+          width:54px;
+          height:34px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: white;
+      }
       #xiahua{
           position: absolute;
           left: 54px;
           width: 228px;
           height: 395px;
-          background-color: cornflowerblue;
+          z-index: 2;
+          background-color: white;
           #xiahua-shang{
               width: 228px;
               height: 34px;
               margin-bottom: 2px;
               background-color: palevioletred;
+              #xiahua-shang-left{
+                  width: 114px;
+                  float: left;
+                  height: 34px;
+                  text-align: center;
+                  line-height: 34px;
+                  font-size: 16px;
+                  color: darkgray;
+                  &:hover{
+                      cursor: pointer;
+                  }
+              }
+              #xiahua-shang-right{
+                  width:113px;
+                  float: left;
+                  font-size: 16px;
+                  border-left: 1px solid darkgray;
+                  height: 34px;
+                  text-align: center;
+                  line-height: 34px;
+                  color: darkgray;
+                  &:hover{
+                      cursor: pointer;
+                  }
+              }
           }
           #xiahua-xia{
-              width: 228px;
-              height: 359px;
-              background-color: oldlace;
+               #xia-left{
+                display: none;
+                width: 228px;
+                height: 359px;
+                background-color: oldlace;
+                #xiahua-xia-left-top{
+                    width: 228px;
+                    height: 120px;
+                    position: relative;
+                    background-color: #F5F5F5;
+                    border-bottom: 1px dashed gray;
+                    img{
+                        float: left;
+                        margin: 23px;
+                    }
+                    .one{
+                       
+                        @include both;
+                        border: 1px solid #459D36;
+                       
+                    }
+                    div{
+                        padding: 3px;
+                        width: 28px;
+                        height: 105px;
+                        position: absolute;
+                        z-index: -1;
+                        border: 1px solid gainsboro;
+                        text-align: center;
+                        border-radius: 5px;
+                        background-color: #c5f4be;
+                        font-size: 15px;
+                    }
+                }
+                 #xiahua-xia-left-center{
+                    width: 228px;
+                    height: 120px;
+                    position: relative;
+                    background-color: #F5F5F5;
+                     border-bottom: 1px dashed gray;
+                     img{
+                        float: left;
+                        margin: 23px;
+                    }
+                    .two{
+                        
+                        @include both;
+                        border: 1px solid #DCDCDC;
+                    }
+                     div{
+                        padding: 3px;
+                        width: 28px;
+                        height: 105px;
+                        position: absolute;
+                        z-index: -1;
+                        border: 1px solid gainsboro;
+                        text-align: center;
+                        border-radius: 5px;
+                        background-color: #eddefb;
+                        font-size: 15px;
+                    }
+                }
+                 #xiahua-xia-left-bottom{
+                    width: 228px;
+                    height: 120px;
+                    position: relative;
+                    background-color: #F5F5F5;
+                     img{
+                        float: left;
+                        margin: 23px;
+                    }
+                    .three{
+                        
+                       @include both;
+                       border: 1px solid #059ee0;
+                    }
+                     div{
+                        padding: 3px;
+                        width: 28px;
+                        height: 105px;
+                        position: absolute;
+                        z-index: -1;
+                        border: 1px solid gainsboro;
+                        text-align: center;
+                        border-radius: 5px;
+                        background-color: #cee4fb;
+                        font-size: 15px;
+                    }
+                }
+              }
+              #xia-right{
+                display: block;
+                width: 228px;
+                height: 359px;
+                background-color: #FCFCFC;
+                ul{
+                    list-style: none;
+                    
+                }
+              }
           }
+             
       } 
+
+
+.box {
+    width:771px;
+    height:360px;
+    position:relative;
+    left: 261px;
+    top: 35px;
+}
+.ul_img {
+    position:absolute;
+}
+.ul_img li {
+    width:771px;
+    height:360px;
+    list-style: none;
+}
+.ul_img li img {
+    width:100%;
+    height:100%;
+}
+.ul_img li img:hover{
+    cursor: pointer;
+}
+.ul_text {
+    position:absolute;
+    right:400px;
+    bottom:20px;
+}
+.ul_text li {
+    float:left;
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:darkgrey;
+    text-align:center;
+    line-height:20px;
+    font-size:14px;
+    margin-left:5px;
+    cursor:pointer;
+    list-style: none;
+}
+.ul_text li.hover {
+    background:gray;
+    color:white;
+}
+#nav{
+    width:966px;
+    height: 35px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 261px;
+    div{
+        width: 117px;
+        height: 37px;
+        background: url(../img/23.png) no-repeat top center;
+        float: left;
+        margin-left: 30px;
+        
+    }
+    ul{
+        position: absolute;
+        left: 170px;
+        z-index: 10;
+        list-style: none;
+        li{
+            float: left;
+            height: 37px;
+            padding:0px 30px;
+            position: relative;
+            cursor: pointer;
+            line-height: 37px;
+            img{
+                position: absolute;
+                left: 5px;
+                top: 8px;
+            }
+        }
+    }
+}
+      
       #youbian{
           width: 198px;
-          height: 395px;
+          height: 360px;
           position: absolute;
           right: 0px;
-          bottom: 0px;
-          background-color: aquamarine;
+          top: 35px;
+          background-color: white; 
+          overflow: hidden;
+          cursor: pointer;
+          #youbian-bottom{
+              width: 198px;
+              height: 120px;
+              float: left;
+              img{
+                  width: 100%;
+                  height: 100%;
+              } 
+          }
+            #youbian-center{
+              width: 198px;
+              height: 120px;
+              float: left;
+              img{
+                  width: 100%;
+                  height: 100%;
+              } 
+          }
+            #youbian-top{
+              width: 198px;
+              height: 120px;
+              float: left;
+              img{
+                  width: 100%;
+                  height: 100%;
+              } 
+          }
       }
            
    }
@@ -276,15 +534,39 @@
 #content{
    margin-top: 30px;
    @include con;
-   height: 462px;
-   background-color: #DB7093;
+   height: 460px;
    position: relative;
+   border: 1px solid grey;
    #content-left{
        position: absolute;
        left: 0;
        width: 328px;
        height: 462px;
-       background-color: coral;
+       background: url(../img/everydayBgNew.png) no-repeat ;
+       
+   }
+   #content-right{
+       position: absolute;
+       left: 329px;
+       #content-right-top{
+           width: 844px;
+           height: 67px;
+           border-bottom: 1px dashed dimgray;
+           position: relative;
+         
+           span:nth-child(2){
+               position: absolute;
+               padding:5px 0px;
+               top: 20px;
+               display: block;
+               font-size: 15px;
+               right: 600px;
+               &:hover{
+                   font-size: 20px;
+                   border-bottom: 1px solid #ed4044;
+               }
+           }
+       }
    }
 }
 //重复的content
@@ -293,6 +575,7 @@
     height: 579px;
     margin-top: 50px;
     background-color: darkolivegreen;
+       
 }
 //会动的萌萌图
 #touch{
@@ -302,6 +585,7 @@
     border: 1px solid darkgray;
     margin-left: 0px;
     background-color: bisque;
+       
 }
 //联系管理等
 #about{
@@ -310,6 +594,7 @@
     height: 184px;
     border: 1px solid gainsboro;
     background-color: #ADD8E6;
+       
 }
 //footer底部
 footer{
@@ -317,7 +602,17 @@ footer{
     margin-left: 0px;
     height: 168px;
     background-color: palevioletred;
+       
 }
+
+
+
+
+
+
+
+
+
 
 
 

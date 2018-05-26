@@ -5,9 +5,13 @@
 		<title></title>
 		<link rel="stylesheet" href="css/main.css" />
 		<script type="text/javascript" src="javascript/jquery-1110.js"></script>
+		<script type="text/javascript" src="javascript/jQueryRotate.2.2.js" ></script>
+		<script type="text/javascript" src="javascript/ajax.js" ></script>
 		<script type="text/javascript" src="javascript/main.js" ></script>
 	</head>
 	<body>
+
+			
 		<!--头部顶栏-->
 		<div id="warp">
 
@@ -155,8 +159,9 @@
 						</div>
 					</div>
 					<div id="xia-right">
-						
-						
+						<ul id="yan">
+							
+						</ul>
 					</div>
 			
 				</div>
@@ -177,26 +182,45 @@
 		<div id="nav">
 			<div id="guoji"></div>
 			<ul>
-				<li>品牌特卖</li>
-				<li>潮品视频</li>
-				<li>罐头超市</li>
-				<li>E宠课堂</li>
-				<li>萌爪联盟</li>
-				<li>清仓特价</li>
+				<li class="yu"><img src="img/yu.png" class="zhuan"/><span>品牌特卖</span></li>
+				<li class="yu"><img src="img/yu.png" class="zhuan"/><span>潮品视频</span></li>
+				<li class="yu"><img src="img/yu.png" class="zhuan"/><span>罐头超市</span></li>
+				<li class="yu"><img src="img/yu.png" class="zhuan"/><span>E宠课堂</span></li>
+				<li class="yu"><img src="img/yu.png" class="zhuan"/><span>萌爪联盟</span></li>
+				<li class="yu"><img src="img/yu.png" class="zhuan"/><span>清仓特价</span></li>
 			</ul>
 		</div>
 	
 			
 			<div id="youbian">
-				
+				<div id="youbian-top" class="yb">
+					<img src="img/20.jpg" />
+				</div>
+				<div id="youbian-center" class="yb">
+					<img src="img/20.jpg" />
+				</div>
+				<div id="youbian-bottom" class="yb">
+					<img src="img/20.jpg" />
+				</div>
 			</div>
 		</div>
 		
 		
 		<!--每日疯抢栏目-->
 		<div id="content">
-			<div id="content-left"></div>
-			<div id="content-right"></div>
+			<div id="content-left">
+			</div>
+			<div id="content-right">
+				<div id="content-right-top">
+					
+					<span>明日预报</span>
+					
+				</div>
+				<div id="content-right-bottom">
+					<div id="jijiang"></div>
+					<div id="mingri"></div>
+				</div>
+			</div>
 		</div>
 		<!--重复的content-->
 		<div id="content1" class="gong">
@@ -215,5 +239,6 @@
 		<!--服务热线等-->
 		<div id="about"></div>
 		<footer></footer>
+	
 	</body>
 </html>

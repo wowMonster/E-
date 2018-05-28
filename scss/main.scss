@@ -180,8 +180,12 @@
     right: 0px;
     width: 36px;
     height: 671px;
-    background-color: lightblue;
-    
+    background-color: #444444;
+    #k{
+        width: 35px;
+        
+        background: url(../dist/img/bg.png)no-repeat 94px 42px;
+    }
 }
 //带有搜索的lanch包括logo
 #lanch{
@@ -1005,8 +1009,8 @@
     width: 1227px;
     margin-left: 0px;
     height: 184px;
-    border: 1px solid gainsboro;
-    background-color: #ADD8E6;
+    border: 1px solid darkgray;
+    background-color: #F5F5F5;
 
     #phone{
         float: left;
@@ -1064,7 +1068,20 @@
        margin-left: 80px;
    } 
    .erweima{
-       
+       margin-top: 30px;
+       margin-left: 70px;
+       float: left;
+       p{
+           font-size: 12px;
+           margin-left: 8px;
+       }
+       .yii{
+           margin-bottom: 10px;
+       }
+       .err{
+           margin-left: 14px;
+           margin-bottom: 10px;
+       }
    }  
 }
 //footer底部
@@ -1073,7 +1090,37 @@ footer{
     margin-left: 0px;
     height: 168px;
     background-color: palevioletred;
-       
+    overflow: hidden;
+        .qw{
+        display: block;
+        margin-top: 30px;
+        li{
+            font-size: 13px;
+            color: #696969;
+            float: left;
+            margin-left: 20px;
+            list-style: none;
+        }
+    }
+    .lp{
+        float: left;
+        height: 40px;
+        display: block;
+        display: block;
+        margin-top: 30px;
+         li{
+            font-size: 13px;
+            color: #696969;
+            float: left;
+            margin-left: 20px;
+            list-style: none;
+        }
+    }
+    p{
+        float: left;
+        font-size: 13px;
+        margin: 10px 0 0 150px;
+    }
 }
 
 

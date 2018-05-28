@@ -704,22 +704,46 @@
     @include con;
     height: 579px;
     margin-top: 50px;
-    background-color: darkolivegreen;
+    border-top: 1px solid gray;
+}
+#content1{
     #content1-left{
         float: left;
         width: 328px;
         height: 509px;
         margin: 0;
         background: url(../img/24.jpg) ;
+        position: relative;
+          .touu{
+                 position: absolute; 
+                 right: -844px;
+                 top: -30px;
+                 height: 30px;
+                 border-top: 1px solid grey;
+                 border-left: 1px solid gray;
+                 div{
+                     font-size: 14px;
+                     border-right: 1px solid gray;
+                     height: 18px;
+                   margin: 5px;
+                   padding: 0 8px;
+                     float: left;
+                 }  
+            }
     }
     #content1-right{
         height: 511px;
+        position: relative;
+        &:hover{
+                 cursor: pointer;
+                    }
          .cont1{
              float: left;
              width: 391px;
              height: 301px;
              position: relative;
-             border-right: 1px solid lightgray;
+             border-right: 1px solid grey;
+             
              img{
                  position: absolute;
                  float: right;
@@ -749,7 +773,7 @@
             height: 150px;
             float: left;
             position: relative;
-            border-bottom: 1px solid gainsboro;
+            border-bottom: 1px solid grey;
             img{
                 height: 150px;
                  position: absolute;
@@ -808,9 +832,9 @@
             height: 210px;
             float: left;
             position: relative;
-            border-top: 1px solid ghostwhite;
-            border-left: 1px solid ghostwhite;
-            border-bottom: 1px solid ghostwhite;
+            border-top: 1px solid grey;
+            border-left: 1px solid grey;
+            border-bottom: 1px solid grey;
             img{
                 height: 100px;
                  position: absolute;
@@ -841,9 +865,9 @@
             height: 210px;
             float: left;
             position: relative;
-            border-top: 1px solid ghostwhite;
-            border-left: 1px solid ghostwhite;
-            border-bottom: 1px solid ghostwhite;
+            border-top: 1px solid grey;
+            border-left: 1px solid grey;
+            border-bottom: 1px solid grey;
             img{
                 height: 100px;
                  position: absolute;
@@ -874,9 +898,9 @@
             height: 210px;
             float: left;
             position: relative;
-            border-top: 1px solid ghostwhite;
-            border-left: 1px solid ghostwhite;
-            border-bottom: 1px solid ghostwhite;
+            border-top: 1px solid grey;
+            border-left: 1px solid grey;
+            border-bottom: 1px solid grey;
             img{
                 height: 100px;
                  position: absolute;
@@ -902,8 +926,34 @@
                  color: #FB6003;
              }
         }
-    
-    
+          
+            .kk{
+                height: 250px;
+                width: 210px;
+                float: left;
+                border-bottom: 1px solid gray;
+                border-right: 1px solid gray;
+                &:hover{
+                    cursor: pointer;
+                }
+                img{
+                    width: 135px;
+                    margin-left: 40px;
+                    margin-top: 30px;
+                    
+                }
+                p{
+                    font-size: 13px;
+                    width: 200px;
+                    color: #808080;
+                    margin:10px 0px 10px 10px;
+                }
+                span{
+                    margin-left: 10px;
+                    font-size: 20px;
+                    color: red;  
+                }
+            }
     
     
     }
@@ -926,8 +976,29 @@
     height: 102px;
     border: 1px solid darkgray;
     margin-left: 0px;
-    background-color: bisque;
-       
+    background-color: #F5F5F5;
+    ul{
+        display: flex;
+        list-style: none;
+        li{
+            margin-top: 18px;
+            margin-left: 23px;
+            width: 180px;
+            height: 65px;
+            img{
+                float: left;
+                height: 65px;
+            }
+            span{
+                float: left;
+                font-size: 20px;
+                line-height: 65px;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
 }
 //联系管理等
 #about{
@@ -936,7 +1007,65 @@
     height: 184px;
     border: 1px solid gainsboro;
     background-color: #ADD8E6;
+
+    #phone{
+        float: left;
+        width: 351px;
+        height: 149px;
+        margin-left: 20px;
+        margin-top: 30px;
+        img{
+            float: left;
+        }
+        p{
+            float: left;
+            margin-left:10px;
+        }
+        .me{
+            float: left;
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-right: 100px;
+        }
+        .oo{
+            float: left;
+            margin-left: 16px;
+            margin-top: 13px;
+        }
+     
+        .uu{
+            margin-top: 13px;
+            margin-left: 120px;
+            font-size: 12px;
+        }
+        .pp{
+             margin-top: 13px;
+            margin-left: 18px;
+            font-size: 16px;
+            float: left;
+        }
+   } 
+   .ul1{
+       float: left;
+       margin-top: 30px;
+       margin-left: 40px;
+       .mi{
+           margin-bottom: 10px;
+       }
+       li{
+           list-style: none;
+           padding: 2px;
+           font-size: 13px;
+           color: black;
+           
+       }
+   }
+   .bn{
+       margin-left: 80px;
+   } 
+   .erweima{
        
+   }  
 }
 //footer底部
 footer{

@@ -27,37 +27,37 @@ window.onload = function(){
 //		滑动换页左栏滑动出现滑块
 		$(function(){
 			$("#xiahua-xia-left-top").mouseenter(function(){
-				$("#xiahua-xia-left-top > div").animate({
+				$("#xiahua-xia-left-top > div").stop().animate({
 					"left":-36,
 					"opacity":1,
 				})
 			})
 			$("#xiahua-xia-left-top").mouseleave(function(){
-				$("#xiahua-xia-left-top > div").animate({
+				$("#xiahua-xia-left-top > div").stop().animate({
 					"left":0,
 					"opacity":0,
 				})
 			})
 			$("#xiahua-xia-left-center").mouseenter(function(){
-				$("#xiahua-xia-left-center > div").animate({
+				$("#xiahua-xia-left-center > div").stop().animate({
 					"left":-36,
 					"opacity":1,
 				})
 			})
 			$("#xiahua-xia-left-center").mouseleave(function(){
-				$("#xiahua-xia-left-center > div").animate({
+				$("#xiahua-xia-left-center > div").stop().animate({
 					"left":0,
 					"opacity":0,
 				})
 			})
 			$("#xiahua-xia-left-bottom").mouseenter(function(){
-				$("#xiahua-xia-left-bottom > div").animate({
+				$("#xiahua-xia-left-bottom > div").stop().animate({
 					"left":-36,
 					"opacity":1,
 				})
 			})
 			$("#xiahua-xia-left-bottom").mouseleave(function(){
-				$("#xiahua-xia-left-bottom > div").animate({
+				$("#xiahua-xia-left-bottom > div").stop().animate({
 					"left":0,
 					"opacity":0,
 				})
@@ -146,13 +146,13 @@ $("#xiahua-shang > div").css("background-color",col[0]);
 	
 	$(function(){
 		$(".yb").mouseenter(function(){
-			$(this).animate({
+			$(this).stop().animate({
 				"margin-left":-10
 			},400)
 		})
 	
 		$(".yb").mouseleave(function(){
-			$(this).animate({
+			$(this).stop().animate({
 				"margin-left":0
 			},400)
 		})
@@ -321,6 +321,7 @@ var cc="";
 	}
 })
 	var contentright=document.getElementById("content1-right");
+	var contentleft=document.getElementById("content1-left");
 	var vv="";
 			Ajax({
 				url:"../json/content.json",
@@ -331,11 +332,176 @@ var cc="";
 					for(var i in data){
 						vv+=`<div class="cont1"><p>${data[i].name[0]}</p><span>${data[i].say[0]}</span><img src="${data[i].img[0]}"  /></div><div class="cont2"><p>${data[i].name[1]}</p><span>${data[i].say[1]}</span><img src="${data[i].img[1]}"  /></div><div class="cont3"><p>${data[i].name[2]}</p><span>${data[i].say[2]}</span><img src="${data[i].img[2]}"  /></div><div class="cont4"><p>${data[i].name[3]}</p><span>${data[i].say[3]}</span><img src="${data[i].img[3]}"  /></div><div class="cont5"><p>${data[i].name[4]}</p><span>${data[i].say[4]}</span><img src="${data[i].img[4]}"  /></div><div class="cont6"><p>${data[i].name[5]}</p><span>${data[i].say[5]}</span><img src="${data[i].img[5]}"  /></div>`
 					}
-					console.log(vv)
 					contentright.innerHTML=vv;
+					$(function(){
+						$("#content1-right").find("img").mouseenter(function(){
+							$(this).stop().animate({
+										"right":40
+									},200)
+						})
+						$("#content1-right").find("img").mouseleave(function(){
+							$(this).stop().animate({
+										"right":10
+									},200)
+						})
+					})
+					$(function(){
+						$("#content2-right").find("img").mouseenter(function(){
+							$(this).stop().animate({
+										"right":40
+									},200)
+						})
+						$("#content2-right").find("img").mouseleave(function(){
+							$(this).stop().animate({
+										"right":10
+									},200)
+						})
+					})
 				}
 			})
-
+		var nn="";
+		Ajax({
+			url:"../json/content1.json",
+			type:'get',
+			success:function(data){
+				data=JSON.parse(data);
+				console.log(data);
+				for(var i in data){
+					nn+=`
+					<div class="touu"><div class="mm">${data[i][0]}</div><div class="mm">${data[i][1]}</div><div class="mm">${data[i][2]}</div><div class="mm">${data[i][3]}</div></div>
+					
+					`
+				}
+				contentleft.innerHTML+=nn;
+			
+				$(function(){
+					$(".mm").mouseenter(function(){
+						var bb=$(".mm").index($(this));
+						if(bb==0){
+							vv="";
+							contentright.innerHTML="";
+						Ajax({
+								url:"../json/content.json",
+								type:'get',
+								success:function(data){
+									data=JSON.parse(data);
+									console.log(data);
+									for(var i in data){
+										vv+=`<div class="cont1"><p>${data[i].name[0]}</p><span>${data[i].say[0]}</span><img src="${data[i].img[0]}"  /></div><div class="cont2"><p>${data[i].name[1]}</p><span>${data[i].say[1]}</span><img src="${data[i].img[1]}"  /></div><div class="cont3"><p>${data[i].name[2]}</p><span>${data[i].say[2]}</span><img src="${data[i].img[2]}"  /></div><div class="cont4"><p>${data[i].name[3]}</p><span>${data[i].say[3]}</span><img src="${data[i].img[3]}"  /></div><div class="cont5"><p>${data[i].name[4]}</p><span>${data[i].say[4]}</span><img src="${data[i].img[4]}"  /></div><div class="cont6"><p>${data[i].name[5]}</p><span>${data[i].say[5]}</span><img src="${data[i].img[5]}"  /></div>`
+									}
+									contentright.innerHTML=vv;
+									
+									$(function(){
+										$("#content1-right").find("img").mouseenter(function(){
+											$(this).stop().animate({
+														"right":40
+													},400)
+										})
+										$("#content1-right").find("img").mouseleave(function(){
+											$(this).stop().animate({
+														"right":10
+													},400)
+										})
+							})
+					}
+			})
+	}
+						if(bb==1){
+							vv="";
+							contentright.innerHTML="";
+							Ajax({
+								url:"../json/content2.json",
+								type:'get',
+								success:function(data){
+									data=JSON.parse(data);
+									console.log(data);
+									for(var i in data){
+										vv+=`
+							<div class="kk"><img src="${data[i].picture}"/><p>${data[i].say}</p><span>${data[i].price}</span></div>`
+				}
+				console.log(nn)
+				contentright.innerHTML+=vv;
+				$(function(){
+										$("#content1-right").find("img").mouseenter(function(){
+											$(this).stop().animate({
+														"right":40
+													},400)
+										})
+										$("#content1-right").find("img").mouseleave(function(){
+											$(this).stop().animate({
+														"right":10
+													},400)
+										})
+							})
+			}
+		})
+	}
+						if(bb==2){
+							vv="";
+							contentright.innerHTML="";
+							Ajax({
+								url:"../json/content3.json",
+								type:'get',
+								success:function(data){
+									data=JSON.parse(data);
+									console.log(data);
+									for(var i in data){
+										vv+=`
+							<div class="kk"><img src="${data[i].picture}"/><p>${data[i].say}</p><span>${data[i].price}</span></div>`
+				}
+				console.log(nn)
+				contentright.innerHTML+=vv;
+				$(function(){
+										$("#content1-right").find("img").mouseenter(function(){
+											$(this).stop().animate({
+														"right":40
+													},400)
+										})
+										$("#content1-right").find("img").mouseleave(function(){
+											$(this).stop().animate({
+														"right":10
+													},400)
+										})
+							})
+			}
+		})
+	}
+						if(bb==3){
+							vv="";
+							contentright.innerHTML="";
+							Ajax({
+								url:"../json/content4.json",
+								type:'get',
+								success:function(data){
+									data=JSON.parse(data);
+									console.log(data);
+									for(var i in data){
+										vv+=`
+							<div class="kk"><img src="${data[i].picture}"/><p>${data[i].say}</p><span>${data[i].price}</span></div>`
+				}
+				console.log(nn)
+				contentright.innerHTML+=vv;
+				
+			}
+		})
+	}
+	})
+})
+}
+})
+			$(function(){
+				$("#touch").find("img").mouseenter(function(){
+					$(this).stop().animate({
+					"margin-top":-10
+				},200)
+				})
+				$("#touch").find("img").mouseleave(function(){
+					$(this).stop().animate({
+					"margin-top":0
+				},200)
+				})
+			})
+		
 
 
 

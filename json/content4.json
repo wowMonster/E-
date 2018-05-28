@@ -1,0 +1,45 @@
+{
+		"one":{
+		"picture":"img/miaosha.jpg",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"two":{
+		"picture":"img/miaosha.jpg",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"three":{
+		"picture":"img/miaosha.jpg",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"four":{
+		"picture":"img/miaosha.jpg",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"eight":{
+		"picture":"img/miaosha.jpg",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"five":{
+		"picture":"img/miaosha.jpg",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"six":{
+		"picture":"img/miaosha.jpg",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"seven":{
+		"picture":"img/miaosha.jpg",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	}
+
+
+
+}

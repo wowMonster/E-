@@ -150,6 +150,7 @@ $("#xiahua-shang > div").css("background-color",col[0]);
 				"margin-left":-10
 			},400)
 		})
+	
 		$(".yb").mouseleave(function(){
 			$(this).animate({
 				"margin-left":0
@@ -159,32 +160,181 @@ $("#xiahua-shang > div").css("background-color",col[0]);
 	var yan=document.getElementById("yan");
 	var srr="";
 	Ajax({
-		url:"../model.json",
+		url:"../json/model.json",
 		type:"get",
 		success:function(data){
 			data=JSON.parse(data);
-			console.log(data);
 			for(var i in data){
-				srr+= `<li>${data[i].name}	<a>${data[i].number}</a><span>${data[i].name1}	</span><a>${data[i].number1}</a> 
-				<ul>
-					<li><img src="${data[i].list.bigimg[0]}"/><span>${data[i].list.bigname[0]}</span></li>
-					<li><span>${data[i].list.listname[0]}	</span><img src="${data[i].list.bigimg[1]}"/>|<span>${data[i].list.listlist[0]}</span>|<span>${data[i].list.listlist[1]}</span>|<span>${data[i].list.listlist[2]}</span>|<span>${data[i].list.listlist[3]}</span>|<span>${data[i].list.listlist[4]}</span></li>
+				srr+= `<li class="lii"><span class="bone">${data[i].name}	</span><a class="btwo">${data[i].number}</a><span class="bthree">${data[i].name1}	</span><a class="bfour">${data[i].number1}</a>
+				<div class="bao">
+				<ul class="bfive">
+					<li class="lione"><img src="${data[i].list.bigimg[0]}"/><span>${data[i].list.bigname[0]}</span></li>
+					<li class="litwo"><span class="lispan">${data[i].list.listname[0]}</span><img class="liimg" src="${data[i].list.bigimg[1]}"/><span>${data[i].list.listlist[0]}</span><span>${data[i].list.listlist[1]}</span><span>${data[i].list.listlist[2]}</span><span>${data[i].list.listlist[3]}</span><span>${data[i].list.listlist[4]}</span></li>
+					<li class="litwo"><span class="lispan">${data[i].list.listname[0]}</span><img class="liimg" src="${data[i].list.bigimg[1]}"/><span>${data[i].list.listlist[0]}</span><span>${data[i].list.listlist[1]}</span><span>${data[i].list.listlist[2]}</span><span>${data[i].list.listlist[3]}</span><span>${data[i].list.listlist[4]}</span></li>
+					<li class="litwo"><span class="lispan">${data[i].list.listname[0]}</span><img class="liimg" src="${data[i].list.bigimg[1]}"/><span>${data[i].list.listlist[0]}</span><span>${data[i].list.listlist[1]}</span><span>${data[i].list.listlist[2]}</span><span>${data[i].list.listlist[3]}</span><span>${data[i].list.listlist[4]}</span></li>
+
 				</ul>
-				<ul>
-					<li><img src="${data[i].list.bigimg[1]}"/><span>${data[i].list.bigname[0]}</span></li>
-					<li><span>${data[i].list.listname[0]}	</span><img src="${data[i].list.bigimg[2]}"/>|<span>${data[i].list.listlist[0]}</span>|<span>${data[i].list.listlist[1]}</span>|<span>${data[i].list.listlist[2]}</span>|<span>${data[i].list.listlist[3]}</span>|<span>${data[i].list.listlist[4]}</span></li>
+				<ul class="bfive">
+					<li class="lione"><img src="${data[i].list.bigimg[1]}"/><span>${data[i].list.bigname[0]}</span></li>
+					<li class="litwo"><span class="lispan">${data[i].list.listname[0]}</span><img class="liimg" src="${data[i].list.bigimg[2]}"/><span>${data[i].list.listlist[0]}</span><span>${data[i].list.listlist[1]}</span><span>${data[i].list.listlist[2]}</span><span>${data[i].list.listlist[3]}</span><span>${data[i].list.listlist[4]}</span></li>
+					<li class="litwo"><span class="lispan">${data[i].list.listname[0]}</span><img class="liimg" src="${data[i].list.bigimg[1]}"/><span>${data[i].list.listlist[0]}</span><span>${data[i].list.listlist[1]}</span><span>${data[i].list.listlist[2]}</span><span>${data[i].list.listlist[3]}</span><span>${data[i].list.listlist[4]}</span></li>
+					<li class="litwo"><span class="lispan">${data[i].list.listname[0]}</span><img class="liimg" src="${data[i].list.bigimg[1]}"/><span>${data[i].list.listlist[0]}</span><span>${data[i].list.listlist[1]}</span><span>${data[i].list.listlist[2]}</span><span>${data[i].list.listlist[3]}</span><span>${data[i].list.listlist[4]}</span></li>	
+					<li class="litwo"><span class="lispan">${data[i].list.listname[0]}</span><img class="liimg" src="${data[i].list.bigimg[1]}"/><span>${data[i].list.listlist[0]}</span><span>${data[i].list.listlist[1]}</span><span>${data[i].list.listlist[2]}</span><span>${data[i].list.listlist[3]}</span><span>${data[i].list.listlist[4]}</span></li>
+					<li class="litwo"><span class="lispan">${data[i].list.listname[0]}</span><img class="liimg" src="${data[i].list.bigimg[1]}"/><span>${data[i].list.listlist[0]}</span><span>${data[i].list.listlist[1]}</span><span>${data[i].list.listlist[2]}</span><span>${data[i].list.listlist[3]}</span><span>${data[i].list.listlist[4]}</span></li>	
 				</ul>
+				</div>
 				</li>
 					`
 				
 			}
-				yan.innerHTML=srr;
-				console.log(srr)
-			
+				yan.innerHTML=srr;  
 		}
 	})
+	
+	
+	
+	
+var contenttop=document.getElementById("content-right-top");
+var contentbottom=document.getElementById("content-right-bottom");
+var arr="";
+var cc="";
+	Ajax({
+		url:"../json/dayhurry.json",
+		type:"get",
+		success:function(data){
+			data=JSON.parse(data);
+			
+				for(var j in data.name){
+					arr+=`<span class="hov">${data.name[j]}</span>`
+				}
+			
+			contenttop.innerHTML=arr;
 
+		console.log(cc)
+	
+		$(function(){
+		
+			$(".hov").mouseenter(function(){
+				var aa=$(".hov").index($(this));
+				if(aa==0){
+						cc="";
+						contentbottom.innerHTML="";
+						Ajax({
+							url:"../json/hurry.json",
+							type:'get',
+							success:function(data){
+								data=JSON.parse(data);
+								
+									for(var i in data){
+										cc+=`<div class="lei"><img src="${data[i].picture}" /><p>${data[i].say}</p><span class="wo">${data[i].price}</span><span class="ai">仅限一件</span><input type="button" value="即将开始" class="pi"/></div>`
+									}
+									
+									contentbottom.innerHTML=cc;
+							}
+						})					
+				}
+				if(aa==1){
+						cc="";
+						contentbottom.innerHTML="";
+						Ajax({
+								url:"../json/hurry1.json",
+								type:'get',
+								success:function(data){
+									data=JSON.parse(data);
+									
+										for(var i in data){
+											cc+=`<div class="lei"><img src="${data[i].picture}" /><p>${data[i].say}</p><span class="wo">${data[i].price}</span><span class="ai">仅限一件</span><input type="button" value="即将开始" class="pi"/></div>`
+										}
+										
+										contentbottom.innerHTML=cc;
+								}
+							})
+				}
+				if(aa==2){
+						cc="";
+						contentbottom.innerHTML="";
+						Ajax({
+								url:"../json/hurry2.json",
+								type:'get',
+								success:function(data){
+									data=JSON.parse(data);
+									
+										for(var i in data){
+											cc+=`<div class="lei"><img src="${data[i].picture}" /><p>${data[i].say}</p><span class="wo">${data[i].price}</span><span class="ai">仅限一件</span><input type="button" value="即将开始" class="pi"/></div>`
+										}
+										
+										contentbottom.innerHTML=cc;
+								}
+						})
+				}
+				if(aa==3){
+						cc="";
+						contentbottom.innerHTML="";
+						Ajax({
+								url:"../json/hurry3.json",
+								type:'get',
+								success:function(data){
+									data=JSON.parse(data);
+									
+										for(var i in data){
+											cc+=`<div class="lei"><img src="${data[i].picture}" /><p>${data[i].say}</p><span class="wo">${data[i].price}</span><span class="ai">仅限一件</span><input type="button" value="即将开始" class="pi"/></div>`
+										}
+										
+										contentbottom.innerHTML=cc;
+								}
+						})
+				}
+				if(aa==4){
+						cc="";
+						contentbottom.innerHTML="";
+						Ajax({
+								url:"../json/hurry4.json",
+								type:'get',
+								success:function(data){
+									data=JSON.parse(data);
+									
+										for(var i in data){
+											cc+=`<div class="lei"><img src="${data[i].picture}" /><p>${data[i].say}</p><span class="wo">${data[i].price}</span><span class="ai">仅限一件</span><input type="button" value="即将开始" class="pi"/></div>`
+										}
+										
+										contentbottom.innerHTML=cc;
+								}
+						})
+				}
+			})
 
+				Ajax({
+							url:"../json/hurry.json",
+							type:'get',
+							success:function(data){
+								data=JSON.parse(data);
+								
+									for(var i in data){
+										cc+=`<div class="lei"><img src="${data[i].picture}" /><p>${data[i].say}</p><span class="wo">${data[i].price}</span><span class="ai">仅限一件</span><input type="button" value="即将开始" class="pi"/></div>`
+									}
+									
+									contentbottom.innerHTML=cc;
+							}
+					})		
+		
+	})
+	}
+})
+	var contentright=document.getElementById("content1-right");
+	var vv="";
+			Ajax({
+				url:"../json/content.json",
+				type:'get',
+				success:function(data){
+					data=JSON.parse(data);
+					console.log(data);
+					for(var i in data){
+						vv+=`<div class="cont1"><p>${data[i].name[0]}</p><span>${data[i].say[0]}</span><img src="${data[i].img[0]}"  /></div><div class="cont2"><p>${data[i].name[1]}</p><span>${data[i].say[1]}</span><img src="${data[i].img[1]}"  /></div><div class="cont3"><p>${data[i].name[2]}</p><span>${data[i].say[2]}</span><img src="${data[i].img[2]}"  /></div><div class="cont4"><p>${data[i].name[3]}</p><span>${data[i].say[3]}</span><img src="${data[i].img[3]}"  /></div><div class="cont5"><p>${data[i].name[4]}</p><span>${data[i].say[4]}</span><img src="${data[i].img[4]}"  /></div><div class="cont6"><p>${data[i].name[5]}</p><span>${data[i].say[5]}</span><img src="${data[i].img[5]}"  /></div>`
+					}
+					console.log(vv)
+					contentright.innerHTML=vv;
+				}
+			})
 
 
 
@@ -197,5 +347,4 @@ $("#xiahua-shang > div").css("background-color",col[0]);
 
 
 }
-
 

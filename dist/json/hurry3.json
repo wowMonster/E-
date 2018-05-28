@@ -1,0 +1,22 @@
+{
+	"one":{
+		"picture":"img/wan.png",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"two":{
+		"picture":"img/wan.png",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"three":{
+		"picture":"img/wan.png",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	},
+	"four":{
+		"picture":"img/wan.png",
+		"say":"狗磨牙棒",
+		"price":"￥4.9"
+	}
+}

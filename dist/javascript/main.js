@@ -193,11 +193,17 @@ $("#xiahua-shang > div").css("background-color",col[0]);
 				</div>
 				</li>
 					`
-				
 			}
-				yan.innerHTML=srr;  
-		}
-	})
+	yan.innerHTML=srr;
+   }
+})
+	
+
+	
+	
+	
+	
+	
 	
 	
 	

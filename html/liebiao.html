@@ -3,7 +3,386 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<script type="text/javascript" src="../javascript/jquery-1110.js"></script>
+		<script type="text/javascript" src="../javascript/jQueryRotate.2.2.js" ></script>
+		<script type="text/javascript" src="../javascript/ajax.js" ></script>
+		<script type="text/javascript" src="../javascript/liebiao.js" ></script>
 	</head>
 	<body>
+
+			
+		<!--头部顶栏-->
+		<div id="warp">
+
+		<div id="xiangxi">
+			<ul id="one">
+				<li>E宠首页</li>
+				<li>送至</li>
+				<li id="way">重庆
+					<ul id="lan">
+						<li class="hua"><span>西南	: &nbsp; |</span>
+							<ul>	
+								<li>北京</li>
+								<li>天津</li>
+								<li>河北</li>
+								<li>山西</li>
+								<li>河南</li>
+								<li>最屌</li>
+							</ul>
+						</li>
+						<li class="hua"><span >华北	: &nbsp; |</span>
+							<ul>
+								<li>北京</li>
+								<li>天津</li>
+								<li>河北</li>
+								<li>山西</li>
+							</ul>
+						</li>
+						<li class="hua"><span >华东: &nbsp; |</span>
+							<ul>
+								<li>北京</li>
+								<li>天津</li>
+								<li>山西</li>
+							</ul>
+						</li>
+						<li class="hua"><span >华中	: &nbsp; |</span>
+							<ul>
+								<li>北京</li>
+								<li>天津</li>
+								<li>河北</li>
+								<li>广东</li>
+								<li>湖南</li>
+								<li>台湾</li>
+							</ul>
+						</li>
+						<li class="hua"><span >华南	: &nbsp; |</span>
+							<ul>
+								<li>北京</li>
+								<li>天津</li>
+								<li>河北</li>
+								<li>山西</li>
+							</ul>
+						</li>
+						<li class="hua"><span >东南	: &nbsp; |</span>
+							<ul>
+								<li>北京</li>
+								<li>天津</li>
+								<li>河北</li>
+								<li>山西</li>
+								<li>内蒙古</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>E宠就是正品</li>
+				<li>评价（<span class="se" id="pingjiashu">608.4万</span>）</li>
+			</ul>
+			<ul id="two">
+				<li id="denglu">[登录]</li>
+				<li id="zhuce">[注册]</li>
+				<li >购物车(<span class="se" id="gouwuche">0</span>)</li>
+				<li id="mye">
+					<span>我的e宠</span>
+					<ul>
+						<li id="wodedingdan">我的订单</li>
+						<li>退换货记录</li>
+						<li>我的优惠卷</li>
+						<li>我的余额</li>
+						<li>爱宠v星球</li>
+					</ul>
+				</li>
+				<li id="shoucang">
+					<span>收藏</span>
+					<ul>
+						<li>我的收藏</li>
+					</ul>
+				</li>
+				<li id="ma">
+					<span>手机版</span>
+					<img src="../img/15 (2).png" />
+				</li>
+				<li class="se">问题反馈</li>
+			</ul>
+		</div>
+		</div>
+		
+
+		<!--右边浮动栏-->
+		<div id="fudong">
+			<div id="k">
+				<!--<div>
+					您还没登录，请先<a>登录</a>
+				</div>-->
+			</div>
+			<div id="g">
+				<div id="l"></div>
+				<span>购物车</span>
+				<div id="y">0</div>
+			</div>
+			<div id="p">
+				<div id="zai"></div>
+				<span>在线客服</span>
+			</div>
+			<div id="b"></div>
+			<div id="d"></div>
+			<div id="e"></div>
+			<div id="w"></div>
+			<div id="q"></div>
+		</div>
+		
+		<!--带有搜索栏，logo，等-->
+		<div id="lanch">
+			<div id="logo"></div>
+			<div id="search">
+				<input type="text" placeholder="Strido prodo" id="sousuokuang"/>
+				<input type="button" value="搜索" id="sousuo"/>
+				<div>
+					<span>热门搜索:</span>
+					
+				</div>
+				
+			</div>
+			<img src="../img/dianhua.png" />
+			<div id="gologo">
+				<a href="#">购物车(	)</a>
+			</div>
+		</div>
+	
+		<!--带有轮播图的头部-->
+<div id="header" class="liebiaoheader">
+			<!--补一下前面小白快-->
+	<div id="lv">
+				
+			
+			<div id="bu"></div>
+			<div id="xiahua">
+				<div id="xiahua-shang" class="liebiao1">
+					<div id="xiahua-shang-left" class="maomao">猫猫</div>
+					<div id="xiahua-shang-right" class="shangp">商品分类</div>
+				</div>
+				<div id="xiahua-xia" class="liebiao">
+					<div id="xia-left">
+						<div id="xiahua-xia-left-top">
+							<img src="../img/28.png"/>
+							<input type="button" value="切换到狗狗站" class="one"/>
+							<div>99元包邮啦</div>
+						</div>
+						<div id="xiahua-xia-left-center">
+							<img src="../img/28.png"/>
+							<input type="button" value="切换到狗狗站" class="two"/>
+							<div>猫砂包邮啦</div>
+						</div>
+						<div id="xiahua-xia-left-bottom">
+							<img src="../img/28.png"/>
+							<input type="button" value="切换到水库站" class="three"/>
+							<div>38元包邮啦</div>
+						</div>
+					</div>
+					<div id="xia-right">
+						<ul id="yan">
+							
+						</ul>
+					</div>
+			
+				</div>
+					
+			</div>
+
+		<!--顶部导航-->
+		<div id="nav">
+			<div id="guoji"></div>
+			<ul>
+				<li class="yu"><img src="../img/yu.png" class="zhuan"/><span>品牌特卖</span></li>
+				<li class="yu"><img src="../img/yu.png" class="zhuan"/><span>潮品视频</span></li>
+				<li class="yu"><img src="../img/yu.png" class="zhuan"/><span>罐头超市</span></li>
+				<li class="yu"><img src="../img/yu.png" class="zhuan"/><span>E宠课堂</span></li>
+				<li class="yu"><img src="../img/yu.png" class="zhuan"/><span>萌爪联盟</span></li>
+				<li class="yu"><img src="../img/yu.png" class="zhuan"/><span>清仓特价</span></li>
+			</ul>
+		</div>
+
+		</div>
+		<nav class="nana"></nav>
+		
+		<div id="conleft">
+			<p id="p1"><span>选择搜索分类</span><a href="#">[全部]</a></p></p>
+			<p id="p2"><span id="lingshi">狗狗零食</span></p>
+			<p id="p3"><span id="guantou">罐头湿粮</span></p>
+		</div>
+		<div id="conright-top">
+			<div class="zh">综合</div>
+			<div class="bp">销量</div>
+			<div class="bp">人气</div>
+			<div class="bp">新品</div>
+			<div class="bp">评论</div>
+			<div class="bp">价格</div>
+			<div class="xianshi">
+				<input type="checkbox"/>
+				<span>只显示有货</span>
+			</div>
+			
+			<div class="shang">上一页</div>
+			<div class="next">下一页</div>
+			<div class="zhaodao">
+				<span>共找到	<span></span>件商品</span>
+				<span>1/1</span>
+			</div>
+		</div>
+		<div id="conright-center">
+			<div class="chuan first">
+				<span>宠物类型：</span>
+				<div class="fir">狗狗</div>
+				<div>猫猫</div>
+				<div>水族</div>
+			</div>
+			<div class="chuan">
+				<span>品牌:</span>
+				<div class="fir">全部</div>
+				<div>宝路pedigree</div>
+			</div>
+		</div>
+		
+		<div id="conright-bottom">
+			
+			
+		</div>
+		
+		
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!--会动的萌萌图-->
+		<div id="touch">
+			<ul>
+				<li>
+					<img src="../img/28.png" />
+					<span>绝对的正品</span>
+				</li>
+				<li>
+					<img src="../img/28.png" />
+					<span>绝对的正品</span>
+				</li>
+				<li>
+					<img src="../img/28.png" />
+					<span>绝对的正品</span>
+				</li>
+				<li>
+					<img src="../img/28.png" />
+					<span>绝对的正品</span>
+				</li>
+				<li>
+					<img src="../img/28.png" />
+					<span>绝对的正品</span>
+				</li>
+				<li>
+					<img src="../img/28.png" />
+					<span>绝对的正品</span>
+				</li>
+				
+			</ul>
+		</div>
+		<!--服务热线等-->
+		<div id="about">
+			<div id="phone">
+				<img src="../img/12.gif" />
+				<p class="me">服务热线</p>
+				<p class="oo">400-888-9200（免长途费）</p>
+				
+				<p class="pp">023-65584888</p>
+				<p class="uu">工作时间：09:00-18:30(周一至周日)</p>
+			</div>
+			<ul class="ul1">
+				<li class="mi">支付方式</li>
+				<li>货到付款</li>
+				<li>余额支付</li>
+				<li>在线支付</li>
+				<li>物流配送</li>
+			</ul>
+			
+			<ul class="ul1 bn">
+				<li class="mi">支付方式</li>
+				<li>货到付款</li>
+				<li>余额支付</li>
+				<li>在线支付</li>
+				<li>物流配送</li>
+			</ul>
+			<ul class="ul1 bn">
+				<li class="mi">支付方式</li>
+				<li>货到付款</li>
+				<li>余额支付</li>
+				<li>在线支付</li>
+				<li>物流配送</li>
+			</ul>
+			<ul class="ul1 bn">
+				<li class="mi">支付方式</li>
+				<li>货到付款</li>
+				<li>余额支付</li>
+				<li>在线支付</li>
+				<li>物流配送</li>
+			</ul>
+			<div class="erweima">
+				<p class="yii">扫描下载app</p>
+				<p class="err">下单更优惠</p>
+				<img src="../img/15 (2).png"/>
+			</div>
+			<div class="erweima">
+				<p class="yii">扫描关注e宠</p>
+				<p class="err">官方微信</p>
+				<img src="../img/15 (2).png"/>
+			</div>
+		</div>
+		<footer>
+			<ul class="qw">
+				<li>友情链接：</li>
+				<li>e猫用品</li>
+				<li>骨头网</li>
+				<li>狗粮品牌</li>
+				<li>淘狗网</li>
+				<li>大连分类信息</li>
+				<li>钓鱼之家</li>
+				<li>海水鱼</li>
+				<li>宠物店加盟</li>
+				<li>中国宠物网</li>
+				<li>兽药网</li>
+				<li>罗汉鱼</li>
+				<li>北京宠物</li>
+				<li>郑州宠物</li>
+				<li>武汉宠物</li>
+			</ul>
+			<ul class="lp">
+				<li><img src="../img/11.png"/></li>
+				<li><img src="../img/9.png" /></li>
+				<li><img src="../img/10.png"/></li>
+				<li><img src="../img/11.png"/></li>
+				<li><img src="../img/9.png" /></li>
+				<li><img src="../img/10.png"/></li>
+				<li><img src="../img/11.png"/></li>
+				<li><img src="../img/9.png" /></li>
+				<li><img src="../img/10.png"/></li>
+				<li><img src="../img/11.png"/></li>
+				<li><img src="../img/10.png"/></li>
+				<li><img src="../img/11.png"/></li>
+			</ul>
+			<p>渝ICP备13005525号-2　渝ICP备10002905　增值电信业务经营许可证：渝B2-20140042 Copyright © 2007-2017 epet.com 　重庆易宠科技有限公司</p>
+		</footer>
+	
 	</body>
 </html>

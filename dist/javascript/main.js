@@ -3,6 +3,14 @@ window.onload = function(){
 	var touchright=document.getElementById("xiahua-shang-right");
 	var xialeft=document.getElementById("xia-left");
 	var xiaright=document.getElementById("xia-right");
+	var denglu=document.getElementById("denglu");
+	var zhuce=document.getElementById("zhuce");
+	denglu.onclick=function(){
+		location.href="http://localhost:8080/html/denglu.html";
+	}
+	zhuce.onclick=function(){
+		location.href="http://localhost:8080/html/zhuce.html#";
+	}
 //	var xihuaone=document.getElementById("xiahua-xia-left-top");
 //	var xiahuatwo=document.getElementById("xiahua-xia-left-center");
 //	var xiahuasan=document.getElementById("xiahua-xia-left-bottom");

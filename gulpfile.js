@@ -19,6 +19,9 @@ var cleanCss=require('gulp-clean-css');
 
 //把index.html拷贝并且放到dist下面   
 gulp.task('copy-index',function(){
+	return gulp.src('html/**.html').pipe(gulp.dest('dist/html')).pipe(connect.reload());
+})
+gulp.task('copy-index1',function(){
 	return gulp.src('index.html').pipe(gulp.dest('dist')).pipe(connect.reload());
 })
 gulp.task('copy-json',function(){
@@ -43,8 +46,9 @@ gulp.task('sever',function(){
 })
 //监听文件   index 以及后面的css  js等
 gulp.task('watch',function(){
-	gulp.watch('index.html',['copy-index']);
-	gulp.watch('scss/main.scss',['sass']);
+	gulp.watch('html/**.html',['copy-index']);
+	gulp.watch('index.html',['copy-index1']);
+	gulp.watch('scss/**.scss',['sass']);
 	gulp.watch('img/**',['images']);
 	gulp.watch('javascript/**/*',['copy-js']);
 	gulp.watch('json/**',['copy-json']);

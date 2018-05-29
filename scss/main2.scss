@@ -9,6 +9,12 @@
     height: 123px;
     position: relative;
     margin: 0 auto;
+    .huanying{
+        position: absolute;
+        left: 180px;
+        bottom: 30px;
+        font-size: 20px;
+    }
     img{
         position: absolute;
         left: 0px;
@@ -32,6 +38,7 @@
 }
 #top-wrap{
     width: 100%;
+    border-bottom: 1px solid gray;
 }
 #content{
     height: 629px;
@@ -146,6 +153,7 @@
 }
 #bottom{
     width: 100%;
+    margin-bottom: 40px;
     div{
         width: 400px;
         height: 20px;
@@ -161,13 +169,90 @@
             }
         }
     }
+  
     p{
         width: 900px;
         font-size: 12px;
         margin: 0 auto;
     }
 }
-
+#con{
+    width: 100%;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 50px;
+}
+.form1{
+    #lol{
+        margin-top: 40px;
+    }
+    margin: 0 auto;
+    width: 725px;
+    height: 510px;
+    margin-bottom: 50px;
+    div{
+        width: 500px;
+        margin-top: 20px;
+        left: 220px;
+        float: right;
+        margin-right: 200px;
+      #yama{
+        display: inline-block;
+        width: 190px;
+        height: 54px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        float: right;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-left: 15px;
+    }
+        span{
+            display: inline-block;
+            line-height: 54px;
+        }
+        
+    }
+    input{
+         float: right;
+        width: 414px;
+        height: 54px;
+        border: 1px solid red;
+        border-radius: 5px ;
+        
+    }
+    #yanzhengma{
+        width: 206px;
+        float: right;
+    }
+  #che{
+            width: 15px;
+            height: 15px;
+            float: left;
+            margin-left: 80px;
+        }
+        #zi{
+            height: 16px;
+            font-size: 12px;
+            line-height: 20px;
+            float: left;
+            margin-left: 5px;
+            a{
+                text-decoration: none;
+            }
+        }
+        #zc{
+            margin-top: 10px;
+            float: left;
+            margin-left: 110px;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 5px;
+            font-size: 16px;
+            color: white;
+            
+        }
+   
+}
 
 
 

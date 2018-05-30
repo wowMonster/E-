@@ -5,6 +5,7 @@ window.onload = function(){
 	var xiaright=document.getElementById("xia-right");
 	var denglu=document.getElementById("denglu");
 	var zhuce=document.getElementById("zhuce");
+
 	denglu.onclick=function(){
 		location.href="http://localhost:8080/html/denglu.html";
 	}
@@ -500,7 +501,10 @@ var cc="";
 		})
 	}
 	})
-})
+				$("#content1-right").find("img").click(function(){
+					location.href="http://localhost:8080/html/liebiao.html";
+				})
+	})
 }
 })
 			$(function(){

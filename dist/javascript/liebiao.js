@@ -149,8 +149,31 @@ window.onload = function(){
 	
 	var conbtm=document.getElementById("conright-bottom");
 	var kk="";
+	var pp="";
 	Ajax({
-		
+		url:"../json/liebiao.json",
+		type:"get",
+		success:function(data){
+			var data=JSON.parse(data);
+			console.log(data);
+			
+			for(var i in data){
+				for(var j in data[i].img){
+					pp+=`<img src="../${data[i].img[j]}" />`}
+				
+				kk+=`
+						<div class="liebiaokuang"><img src="../${data[i].picture}" class="datu"/><div class="xiaotu">${pp}</div><p class="biaoti">${data[i].say}</p><p class="jiage">${data[i].price}</p><span class="shouchu">${data[i].shou}</span><span class="hudong">${data[i].hu}</span></div>
+				`
+				pp="";
+			}
+			console.log(kk)
+			conbtm.innerHTML=kk;
+			$(function(){
+				$(".liebiaokuang").find(".datu").click(function(){
+					location.href="http://localhost:8080/html/xiangqing.html";
+				})
+			})
+		}
 	})
 	
 	

@@ -1224,7 +1224,7 @@ footer{
 
 //此为列表页
 .liebiaoheader{
-    min-height: 1500px;
+    min-height: 1700px;
     background-color: #F5F5F5;
     margin-bottom: -30px;
 }
@@ -1412,18 +1412,280 @@ footer{
         width: 944px;
         height: 1000px;
         float: right;
-        border: 1px solid #DCDCDC;
         margin-top: 10px;
+        .liebiaokuang{
+            margin: 17px 10px 0px 0px;
+            width: 223px;
+            height: 375px;
+            float: left;
+            box-sizing:border-box; 
+            background-color:white;
+            display: block;
+            &:hover{
+                border: 1px solid #008000;
+                
+            }
+            .datu{
+                height: 192px;
+                margin: 10px 0px 0px 15px ;
+            }
+            .xiaotu{
+                width: 208px;
+                height: 42px;
+                margin: 10px 0px 10px 6px;
+                img{
+                    width: 34px;
+                    height: 34px;
+                    &:hover{
+                        border: 1px solid #008000;
+                    }
+                }
+            }
+            .biaoti{
+                font-size: 13px;
+                margin-left: 10px;
+            }
+            .jiage{
+                margin-top: 10px;
+                font-size: 18px;
+                margin-left: 110px;
+                color: #ff6600;
+            }
+            .shouchu{
+                margin-top: 30px;
+                margin-left: 10px;
+                font-size: 13px;
+                color: #A6A6A6;
+            }
+            .hudong{
+                margin-top: 30px;
+                margin-left: 60px;
+                font-size: 13px;
+                color: #A6A6A6;
+            }
+        }
 }
 
-
-
-
-
-
-
-
-
+//详情
+.xiang{
+    padding-right: 0px!important;
+    margin-left: 10px;
+}
+.xiangqingheader{
+    height: 40px!important;
+}
+#fangda{
+    width: 402px;
+    height: 477px;
+    background: lavenderblush;
+    margin-left: 30px;
+    margin-top: 30px;
+    display: inline-block;
+    vertical-align: top;
+    #left1{
+        margin:0px 0px 0px 60px;
+        width: 300px;
+        height: 400px;
+        background: lightblue;
+        position: relative;
+    }
+    #topcont{
+        width: 300px;
+        height: 300px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    #centercont{
+        width: 300px;
+        overflow: hidden;
+        height: 34px;
+        border: 1px solid red;
+        position: relative;
+        #baoq{
+            width: 210px;
+            height: 34px;
+            overflow: hidden;
+            left: 34px;
+            position: relative;
+        }
+        #langbox{
+            position: absolute;
+            display:block;
+            height: 34px;
+            img{
+                margin-left: 7px;
+                float: left;
+                width: 34px;
+                height: 34px;
+                &:hover{
+                    border: 1px solid #008000;
+                }
+            }
+        }
+         #centleft{
+             text-align: center;
+             line-height: 34px;
+             font-size: 18px;
+             display: block;
+             width: 34px;
+             height: 34px;
+             position: absolute;
+             left: 0px;
+            }
+        #centright{
+            line-height: 34px;
+            font-size: 18px;
+            text-align: center;
+             display: block;
+             width: 34px;
+             height: 34px;
+             position: absolute;
+              right: 0px; 
+              top: 0;
+              z-index: 4;          
+        }
+    }
+    p{
+        font-size: 13px;
+        margin-top: 15px;
+        color: #808080;
+    }
+}
+#youbian{
+    width: 744px;
+    height: 800px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: lightskyblue;
+    div{
+        width: 500px;
+        height: 600px;
+        margin-left: 30px;
+        margin-top: 40px;
+        background-color: lightsalmon;
+        #say{
+            float: left;
+            margin: 20px;
+            font-size: 25px;
+            text-indent: 10px;
+        }
+        #price{
+            float: left;
+            margin: 20px;
+            width: 450px;
+            line-height: 80px;
+            height: 80px;
+            font-size: 40px;
+            background-color:#A6A6A6 ;
+            color: #FB6003;
+        }
+        span{
+            float: left;
+            margin: 10px;
+            font-size: 15px;
+        }
+        #gouwuc{
+            float: left;
+            width: 300px;
+            height: 40px;
+            font-size: 20px;
+            color: white;
+             border-radius: 20px;
+            background-color: #4ACE83;
+            border: none;
+            margin: 40px 0px 0px 30px;
+        }
+        #coun{
+            width: 100px;
+            height: 30px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            background-color: white;
+            margin: 40px;
+            margin-left: 100px;
+        }
+    }
+}
+//#bigcont{
+//  width: 450px;
+//  height: 450px;
+//  position: absolute;
+//  left: 343px;
+//  top: 0px;
+//  img{
+//      width: 100%;
+//      height: 100%;
+//  }
+//}
+           #glog{
+               @include con;
+               height: 100px;
+               img{
+                   float: left;
+                   margin-left: 10px;
+                   margin-top: 20px;
+               };
+               span{
+                   display: inline-block;
+                   margin-top: 33px;
+                   font-size: 20px;
+               }
+              #kuang{
+                  margin-top: 30px;
+                  width: 287px;
+                  height: 30px;
+                  border: 2px solid #459D36;
+                  float: right;
+                  input{
+                      border: none;
+                  }
+                  #kua{
+                      width: 220px;
+                      height: 30px;
+                  }
+                  #sou{
+                      width: 60px;
+                      height: 30px;
+                      float: right;
+                      background-color: #459D36;
+                      color: white;
+                  }
+              }
+               
+           }
+            #gwcul{
+               
+                margin-top: 20px;
+                margin-left: 70px;
+                overflow: hidden;
+                border-bottom:2px solid #FCFCFC;
+                li{
+                    float: left;
+                    font-size: 20px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    padding-bottom: 15px;
+                    list-style: none;
+                    border-right: 1px solid gainsboro;
+                    &:hover{
+                        z-index: 3;
+                        border-bottom: 3px solid #FB6003;
+                    }
+                }
+            }
+            
+            #qingsuan{
+                margin-top: 20px;
+                min-height: 300px;
+                @include con;
+                background-color: #FCFCFC;
+                
+            }
+            
 
 
 

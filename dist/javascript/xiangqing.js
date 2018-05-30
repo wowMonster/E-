@@ -146,37 +146,110 @@ window.onload = function(){
 				yan.innerHTML=srr;  
 		}
 	})
-	
-	var conbtm=document.getElementById("conright-bottom");
-	var kk="";
-	var pp="";
-	Ajax({
-		url:"../json/liebiao.json",
-		type:"get",
-		success:function(data){
-			var data=JSON.parse(data);
-			console.log(data);
-			
-			for(var i in data){
-				for(var j in data[i].img){
-					pp+=`<img src="../${data[i].img[j]}" />`}
-				
-				kk+=`
-						<div class="liebiaokuang"><img src="../${data[i].picture}" class="datu"/><div class="xiaotu">${pp}</div><p class="biaoti">${data[i].say}</p><p class="jiage">${data[i].price}</p><span class="shouchu">${data[i].shou}</span><span class="hudong">${data[i].hu}</span></div>
-				`
-				pp="";
+
+var fangda=document.getElementById("fangda");
+
+var cc="";
+var yy="";
+Ajax({
+	url:"../json/xiangqing.json",
+	type:"get",
+	success:function(data){
+		var data=JSON.parse(data);
+		console.log(data);
+		for(var i in data){
+			for(var j in data[i].img){
+				yy+=`<img src="../${data[i].img[j]}"/>`
 			}
-			console.log(kk)
-			conbtm.innerHTML=kk;
-			$(function(){
-				$(".liebiaokuang").find(".datu").click(function(){
-					location.href="http://localhost:8080/html/xiangqing.html";
-				})
-			})
+			cc+=`<div id="left1"><div id="topcont"><img src="../${data[i].img[0]}"/></div><div id="centercont"><span id="centleft"><</span><div id="baoq"><div id="langbox">${yy}</div></div><span id="centright">></span></div><p>商品编号:${i}</p></div>`
 		}
-	})
-	
-	
+		fangda.innerHTML=cc;
+	var langbox=document.getElementById("langbox");
+	var leftbtn=document.getElementById("centleft");
+	var rightbtn=document.getElementById("centright");
+	var bigcont=document.getElementById("bigcont");
+	var topcont=document.getElementById("topcont");
+	var op=topcont.children[0];
+	var oimg=langbox.children;
+	var aa=oimg.length*44;
+	console.log(aa)
+	langbox.style.width=aa+"px";
+	console.log(langbox.offsetWidth)
+	var count=0;
+		leftbtn.onclick=function(){
+			count++;
+			if(count>oimg.length){
+				count=0;
+			}
+			langbox.style.left=(-count*44)+"px";
+		}
+		console.log(count)
+		rightbtn.onclick=function(){
+			count++;
+			if(count>oimg.length){
+				count=0;
+			}
+			langbox.style.left=(count*44)+"px";
+		}
+		var topcont=document.getElementById("topcont");
+
+	}
+})
+var youbian=document.getElementById("youbian");
+var ll="";
+Ajax({
+	url:"../json/xiangqing.json",
+	type:"get",
+	success:function(data){
+		var data=JSON.parse(data);
+		for(var i in data){
+			ll+=`<div>
+			<p id="say">${data[i].say}</p>
+			<p id="price">${data[i].price}</p>
+			<span>${data[i].shou}</span>
+			<span>${data[i].zx}</span>
+			<span>${data[i].pg}</span>
+			<div id="coun">0</div>
+			<input type="button" value="加入购物车" id="gouwuc" data-id=${i}/>
+			</div>`
+		}
+		console.log(ll)
+		youbian.innerHTML=ll;
+		var btn=document.getElementById("gouwuc");
+		var coun=document.getElementById("coun");
+		if(getCookie("cart")!== undefined){
+			var obj = JSON.parse(getCookie("cart"));
+		}else{
+			var obj = {};
+		}
+		var sum = 0;
+		for(var b in obj){
+			sum+=obj[b];
+		}
+		coun.innerHTML=sum;
+		btn.onclick = function(){
+			var productid=this.getAttribute("data-id");
+			if(obj[productid] ==  undefined){
+				obj[productid] = 1;
+			}else{
+				obj[productid]++;
+			}
+			var sum = 0;
+			for(var b in obj){
+				sum+=obj[b];
+			}
+			coun.innerHTML=sum;
+			var objtostr = JSON.stringify(obj);
+			setCookie("cart",objtostr,7);
+		}
+		
+		
+	}
+
+})
+
+
+
 
 
 

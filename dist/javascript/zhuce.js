@@ -9,6 +9,10 @@ window.onload=function(){
 	var yama=document.getElementById("yama");
 	var shu=1000+Math.floor(Math.random()*9000);
 	var consol=false;
+	var login=document.getElementsByClassName("login");
+	login[0].onclick=function(){
+		location.href="http://localhost:8080/html/denglu.html";
+	}
 	yama.innerHTML=shu;
 
 	btn.onclick=function(){

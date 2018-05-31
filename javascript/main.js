@@ -5,7 +5,16 @@ window.onload = function(){
 	var xiaright=document.getElementById("xia-right");
 	var denglu=document.getElementById("denglu");
 	var zhuce=document.getElementById("zhuce");
-
+	var gologo=document.getElementById("gologo");
+	var gochildren=gologo.children[0];
+	var one=document.getElementById("one");
+	var oneshou=one.children[0];
+	oneshou.onclick=function(){
+		location.href="http://localhost:8080";
+	}
+	gologo.onclick=function(){
+		location.href="http://localhost:8080/html/gouwuc.html";
+	}
 	denglu.onclick=function(){
 		location.href="http://localhost:8080/html/denglu.html";
 	}
@@ -520,10 +529,19 @@ var cc="";
 				})
 			})
 		
-
-
-
-
+		var gouwuche=document.getElementById("gouwuche");
+		var y=document.getElementById("y");
+		var hq=JSON.parse(getCookie("cart"));
+		var ii=0;
+		for(var i in hq){
+			ii+=hq[i];
+		}
+		gochildren.innerHTML="购物车（"+ii+"）";
+		gouwuche.innerHTML=ii;
+		y.innerHTML=ii;
+		y.onclick=function(){
+			location.href="http://localhost:8080/html/gouwuc.html";
+		}
 
 
 

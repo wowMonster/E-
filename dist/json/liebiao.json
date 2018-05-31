@@ -5,31 +5,35 @@
 		"say":"狗磨牙棒",
 		"price":"￥4.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1002":{
-		"picture":"img/19.jpg",
+		"picture":"img/1.jpg",
 		"img":["img/xiaotu1.jpg","img/xiaotu2.jpg","img/xiaotu3.jpg","img/xiaotu3.jpg","img/xiaotu3.jpg"],
-		"say":"狗磨牙棒",
-		"price":"￥4.9",
+		"say":"狗房子",
+		"price":"￥400.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1003":{
-		"picture":"img/19.jpg",
+		"picture":"img/miaosha.jpg",
 		"img":["img/xiaotu1.jpg","img/xiaotu2.jpg","img/xiaotu3.jpg","img/xiaotu3.jpg","img/xiaotu3.jpg"],
-		"say":"狗磨牙棒",
-		"price":"￥4.9",
+		"say":"狗奶粉",
+		"price":"￥555.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1004":{
-		"picture":"img/19.jpg",
+		"picture":"img/gou.jpg",
 		"img":["img/xiaotu1.jpg","img/xiaotu2.jpg","img/xiaotu3.jpg","img/xiaotu3.jpg","img/xiaotu3.jpg"],
-		"say":"狗磨牙棒",
-		"price":"￥4.9",
+		"say":"狗粮",
+		"price":"￥94.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1005":{
 		"picture":"img/19.jpg",
@@ -37,7 +41,8 @@
 		"say":"狗磨牙棒",
 		"price":"￥4.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1006":{
 		"picture":"img/19.jpg",
@@ -45,7 +50,8 @@
 		"say":"狗磨牙棒",
 		"price":"￥4.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1007":{
 		"picture":"img/19.jpg",
@@ -53,7 +59,8 @@
 		"say":"狗磨牙棒",
 		"price":"￥4.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1008":{
 		"picture":"img/19.jpg",
@@ -61,7 +68,8 @@
 		"say":"狗磨牙棒",
 		"price":"￥4.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1009":{
 		"picture":"img/19.jpg",
@@ -69,7 +77,8 @@
 		"say":"狗磨牙棒",
 		"price":"￥4.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1010":{
 		"picture":"img/19.jpg",
@@ -77,7 +86,8 @@
 		"say":"狗磨牙棒",
 		"price":"￥4.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	},
 	"1011":{
 		"picture":"img/19.jpg",
@@ -85,7 +95,8 @@
 		"say":"狗磨牙棒",
 		"price":"￥4.9",
 		"shou":"已售17423袋",
-		"hu":"4223人互动"
+		"zx":"4223人互动",
+		"pg":"评价（5207）"
 	}
 
 

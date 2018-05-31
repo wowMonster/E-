@@ -7,6 +7,16 @@ window.onload = function(){
 	var zhuce=document.getElementById("zhuce");
 	var bigul=document.getElementById("xiahua");
 	var xiahuaxia=document.getElementById("xiahua-xia");
+	var gologo=document.getElementById("gologo");
+	var gochildren=gologo.children[0];
+	var one=document.getElementById("one");
+	var oneshou=one.children[0];
+	oneshou.onclick=function(){
+		location.href="http://localhost:8080";
+	}
+	gologo.onclick=function(){
+		location.href="http://localhost:8080/html/gouwuc.html";
+	}
 	denglu.onclick=function(){
 		location.href="http://localhost:8080/html/denglu.html";
 	}
@@ -162,23 +172,37 @@ window.onload = function(){
 					pp+=`<img src="../${data[i].img[j]}" />`}
 				
 				kk+=`
-						<div class="liebiaokuang"><img src="../${data[i].picture}" class="datu"/><div class="xiaotu">${pp}</div><p class="biaoti">${data[i].say}</p><p class="jiage">${data[i].price}</p><span class="shouchu">${data[i].shou}</span><span class="hudong">${data[i].hu}</span></div>
+						<div class="liebiaokuang" boo-id=${i}><img src="../${data[i].picture}" class="datu"/><div class="xiaotu">${pp}</div><p class="biaoti">${data[i].say}</p><p class="jiage">${data[i].price}</p><span class="shouchu">${data[i].shou}</span><span class="hudong">${data[i].zx}</span></div>
 				`
 				pp="";
 			}
 			console.log(kk)
 			conbtm.innerHTML=kk;
 			$(function(){
-				$(".liebiaokuang").find(".datu").click(function(){
-					location.href="http://localhost:8080/html/xiangqing.html";
-				})
+				var idd=document.getElementsByClassName("liebiaokuang");
+					for(var i in idd){
+						idd[i].onclick=function(){
+							var souid=this.getAttribute("boo-id");
+							location.href="http://localhost:8080/html/xiangqing.html?id="+souid;
+						}
+					}
+		
 			})
 		}
 	})
-	
-	
-
-
+		var gouwuche=document.getElementById("gouwuche");
+		var hq=JSON.parse(getCookie("cart"));
+		var y=document.getElementById("y");
+		var ii=0;
+		for(var i in hq){
+			ii+=hq[i];
+		}
+		gochildren.innerHTML="购物车（"+ii+"）";
+		gouwuche.innerHTML=ii;
+		y.innerHTML=ii;
+		y.onclick=function(){
+			location.href="http://localhost:8080/html/gouwuc.html";
+		}
 
 
 

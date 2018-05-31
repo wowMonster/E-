@@ -3,6 +3,10 @@ window.onload=function(){
 var dengd=document.getElementById("in4");
 var dengz=document.getElementById("in1");
 var dengp=document.getElementById("in2");
+var ins=document.getElementById("ins");
+ins.onclick=function(){
+	location.href="http://localhost:8080/html/zhuce.html";
+}
 dengd.onclick=function(){
 	var dengzz=String(dengz.value);
 	var dengpp=String(dengp.value);

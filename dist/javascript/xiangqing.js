@@ -7,6 +7,16 @@ window.onload = function(){
 	var zhuce=document.getElementById("zhuce");
 	var bigul=document.getElementById("xiahua");
 	var xiahuaxia=document.getElementById("xiahua-xia");
+	var gologo=document.getElementById("gologo");
+	var gochildren=gologo.children[0];
+	var one=document.getElementById("one");
+	var oneshou=one.children[0];
+	oneshou.onclick=function(){
+		location.href="http://localhost:8080";
+	}
+	gologo.onclick=function(){
+		location.href="http://localhost:8080/html/gouwuc.html";
+	}
 	denglu.onclick=function(){
 		location.href="http://localhost:8080/html/denglu.html";
 	}
@@ -147,23 +157,27 @@ window.onload = function(){
 		}
 	})
 
+var strr=location.search;
+var kl=strr.split("=")[1];
 var fangda=document.getElementById("fangda");
+
 
 var cc="";
 var yy="";
 Ajax({
-	url:"../json/xiangqing.json",
+	url:"../json/liebiao.json",
 	type:"get",
 	success:function(data){
 		var data=JSON.parse(data);
-		console.log(data);
 		for(var i in data){
-			for(var j in data[i].img){
-				yy+=`<img src="../${data[i].img[j]}"/>`
-			}
-			cc+=`<div id="left1"><div id="topcont"><img src="../${data[i].img[0]}"/></div><div id="centercont"><span id="centleft"><</span><div id="baoq"><div id="langbox">${yy}</div></div><span id="centright">></span></div><p>商品编号:${i}</p></div>`
+			if(i==kl){
+				for(var j in data[i].img){
+						yy+=`<img src="../${data[i].img[j]}"/>`
+				}
+		cc+=`<div id="left1"><div id="topcont"><img src="../${data[i].picture}"/></div><div id="centercont"><span id="centleft"><</span><div id="baoq"><div id="langbox">${yy}</div></div><span id="centright">></span></div><p >商品编号:${i}</p></div>`
 		}
-		fangda.innerHTML=cc;
+	}
+	fangda.innerHTML=cc;
 	var langbox=document.getElementById("langbox");
 	var leftbtn=document.getElementById("centleft");
 	var rightbtn=document.getElementById("centright");
@@ -172,9 +186,7 @@ Ajax({
 	var op=topcont.children[0];
 	var oimg=langbox.children;
 	var aa=oimg.length*44;
-	console.log(aa)
 	langbox.style.width=aa+"px";
-	console.log(langbox.offsetWidth)
 	var count=0;
 		leftbtn.onclick=function(){
 			count++;
@@ -183,7 +195,6 @@ Ajax({
 			}
 			langbox.style.left=(-count*44)+"px";
 		}
-		console.log(count)
 		rightbtn.onclick=function(){
 			count++;
 			if(count>oimg.length){
@@ -192,57 +203,88 @@ Ajax({
 			langbox.style.left=(count*44)+"px";
 		}
 		var topcont=document.getElementById("topcont");
+		
+		
 
 	}
 })
+
+
+//取cookie
+	var hq=JSON.parse(getCookie("cart"));
+	console.log(hq)
+	
+	
 var youbian=document.getElementById("youbian");
 var ll="";
+var ii=0;
 Ajax({
-	url:"../json/xiangqing.json",
+	url:"../json/liebiao.json",
 	type:"get",
 	success:function(data){
 		var data=JSON.parse(data);
 		for(var i in data){
-			ll+=`<div>
+			if(i==kl){
+				ll+=`<div>
 			<p id="say">${data[i].say}</p>
 			<p id="price">${data[i].price}</p>
 			<span>${data[i].shou}</span>
 			<span>${data[i].zx}</span>
 			<span>${data[i].pg}</span>
 			<div id="coun">0</div>
-			<input type="button" value="加入购物车" id="gouwuc" data-id=${i}/>
+			<input type="button" value="加入购物车" class="gouwuc" data-id=${i}/>
 			</div>`
-		}
-		console.log(ll)
+			}
+	}
 		youbian.innerHTML=ll;
-		var btn=document.getElementById("gouwuc");
+		var btn=document.getElementsByClassName("gouwuc");
+		var productid=btn[0].getAttribute("data-id");		
 		var coun=document.getElementById("coun");
-		if(getCookie("cart")!== undefined){
-			var obj = JSON.parse(getCookie("cart"));
+		console.log(hq[productid])
+		if(hq[productid]==undefined){
+			coun.innerHTML=0;
 		}else{
-			var obj = {};
+			coun.innerHTML=hq[productid];
 		}
-		var sum = 0;
-		for(var b in obj){
-			sum+=obj[b];
+		for(var i in hq){
+			ii+=hq[i];
 		}
-		coun.innerHTML=sum;
-		btn.onclick = function(){
-			var productid=this.getAttribute("data-id");
-			if(obj[productid] ==  undefined){
-				obj[productid] = 1;
+		gochildren.innerHTML="购物车（"+ii+"）";
+		var gouwuche=document.getElementById("gouwuche");
+		var y=document.getElementById("y")
+		y.innerHTML=ii;
+		gouwuche.innerHTML=ii;
+		y.onclick=function(){
+			location.href="http://localhost:8080/html/gouwuc.html";
+		}
+		btn[0].onclick = function(){
+			ii=0;
+			if(hq[productid] ==  undefined){
+				hq[productid] = 1;
 			}else{
-				obj[productid]++;
+				++hq[productid];
 			}
-			var sum = 0;
-			for(var b in obj){
-				sum+=obj[b];
-			}
-			coun.innerHTML=sum;
-			var objtostr = JSON.stringify(obj);
+		for(var i in hq){
+			ii+=hq[i];
+		}
+		gochildren.innerHTML="购物车（"+ii+"）";
+			coun.innerHTML=hq[productid];
+			var objtostr = JSON.stringify(hq);
 			setCookie("cart",objtostr,7);
+			
 		}
 		
+		
+//		var proid=document.getElementsByClassName("prop");
+//		var proid1=proid[0].getAttribute("pro-id");
+//		console.log(proid1+"/");
+//		console.log(hq[proid1+"/"])
+//		if(hq[proid1+"/"]==undefined){
+//			coun.innerHTML=0;
+//		}else{
+//			coun.innerHTML=hq[proid1+"/"];
+//		}
+
 		
 	}
 

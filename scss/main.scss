@@ -176,6 +176,7 @@
 // 浮动
 #fudong{
     position: fixed;
+    z-index: 1000;
     top: 0px;
     right: 0px;
     width: 36px;
@@ -209,6 +210,7 @@
             height: 25px;
             margin-left: 6px;
             background: url(../img/13.png)no-repeat -5px -278px;
+            cursor: pointer;
          }
          span{
              display: block;
@@ -225,6 +227,7 @@
             background-color: #A6A6A6;
             text-align: center;
             line-height: 25px;
+            cursor: pointer;
          }
     }
     #p{
@@ -236,6 +239,7 @@
             height: 25px;
             margin-left: 6px;
             background: url(../img/13.png)no-repeat -5px -621px;
+            cursor: pointer;
         }
         span{
              display: block;
@@ -251,6 +255,7 @@
         height: 25px;
         margin-left: 6px;
         background: url(../img/13.png)no-repeat -5px -311px;
+        cursor: pointer;
     }
      #d{
         margin-top: 10px;
@@ -258,6 +263,7 @@
         height: 25px;
         margin-left: 6px;
         background: url(../img/13.png)no-repeat -5px -699px;
+        cursor: pointer;
     }
      #e{
         margin-top: 50px;
@@ -265,6 +271,7 @@
         height: 25px;
         margin-left: 6px;
         background: url(../img/13.png)no-repeat -5px -416px;
+        cursor: pointer;
     }
      #w{
         margin-top: 10px;
@@ -272,6 +279,7 @@
         height: 25px;
         margin-left: 6px;
         background: url(../img/13.png)no-repeat -5px -731px;
+        cursor: pointer;
     }
      #q{
         margin-top: 10px;
@@ -279,6 +287,15 @@
         height: 25px;
         margin-left: 6px;
         background: url(../img/13.png)no-repeat -5px -761px;
+        cursor: pointer;
+    }
+    #wx{
+        display: block;
+        width: 100px;
+        margin-left: 50px;
+        margin-top: -100px;
+        height: 100px;
+        background: url(../img/7.jpg)no-repeat;
     }
 }
 //带有搜索的lanch包括logo
@@ -343,7 +360,7 @@
             text-decoration: none;
             float: right;
             color: gray;
-            margin-right: 20px;
+            margin-right: 10px;
             line-height: 39px;
         }
     }
@@ -1476,17 +1493,16 @@ footer{
 }
 #fangda{
     width: 402px;
+    position: absolute;
     height: 477px;
-    background: lavenderblush;
-    margin-left: 30px;
-    margin-top: 30px;
+    left: -2px;
+    top: 30px;
     display: inline-block;
     vertical-align: top;
     #left1{
         margin:0px 0px 0px 60px;
         width: 300px;
         height: 400px;
-        background: lightblue;
         position: relative;
     }
     #topcont{
@@ -1501,7 +1517,7 @@ footer{
         width: 300px;
         overflow: hidden;
         height: 34px;
-        border: 1px solid red;
+      
         position: relative;
         #baoq{
             width: 210px;
@@ -1552,20 +1568,26 @@ footer{
         margin-top: 15px;
         color: #808080;
     }
+    
+}
+#bbbb{
+    @include con;
+    position: relative;
+    height: 1000px;
 }
 #youbian{
     width: 744px;
     height: 800px;
-    margin-left: 30px;
-    margin-top: 20px;
+    right: 10px;
+    top: 20px;
     display: inline-block;
-    background-color: lightskyblue;
+    position: absolute;
     div{
         width: 500px;
-        height: 600px;
+        height: 500px;
         margin-left: 30px;
-        margin-top: 40px;
-        background-color: lightsalmon;
+        margin-top: 30px;
+        background-color: #F5F5F5;
         #say{
             float: left;
             margin: 20px;
@@ -1587,7 +1609,7 @@ footer{
             margin: 10px;
             font-size: 15px;
         }
-        #gouwuc{
+        .gouwuc{
             float: left;
             width: 300px;
             height: 40px;
@@ -1683,7 +1705,82 @@ footer{
                 min-height: 300px;
                 @include con;
                 background-color: #FCFCFC;
-                
+                .gwc{
+                     position: relative;
+                     width: 100%;
+                     height: 111px;
+                     border-bottom: 2px solid #A6A6A6;
+                     .xuankuang{
+                            position: absolute;
+                            left: 30px;
+                            top: 40px;   
+                     }
+                     .ig{
+                         width: 80px;
+                         height: 80px;
+                         border:  none;
+                         position: absolute;
+                         left: 70px;
+                         top: 10px;
+                         border: 1px solid #A6A6A6;
+                     }
+                     .miaosu{
+                         font-size: 12px;
+                         position: absolute;
+                         left:200px;
+                         top: 30px;
+                     }
+                     .jiajiankuang{
+                         width: 60px;
+                         height: 40px;
+                         position: absolute;
+                         left: 520px;
+                         top: 40px;
+                         background-color: white;
+                         border: 1px solid #A6A6A6;
+                         .jian{
+                             float: left;
+                             width: 15px;
+                             height: 100%;
+                             text-align: center;
+                             line-height: 40px;
+                             border-right: 1px solid #A6A6A6;
+                         }
+                         .shu{
+                             text-align: center;
+                             line-height: 40px;                            
+                             width: 28px;
+                             float: left;
+                         }
+                         .jia{
+                             text-align: center;
+                             line-height: 40px;                             
+                             border-left: 1px solid #A6A6A6;
+                             width: 15px;
+                             height: 100%;
+                             float: left;
+                         }
+                     }
+                     .zongjia{
+                         position: absolute;
+                         right: 200px;
+                         top: 40px;
+                         font-size: 14px;
+                         background-color: yellowgreen;
+                         color: white;
+                         height: 30px;
+                         text-align: center;
+                         line-height: 30px;
+                     }
+                     .delbtn{
+                         width: 40px;height: 20px;
+                         position: absolute;
+                         right: 50px;
+                         top: 40px;
+                         font-size: 14px;
+                     }
+                     
+                }
             }
             
 
